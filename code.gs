@@ -1,10 +1,11 @@
-//役割：ドキュメント内の全ての画像の高さを一括設定する。
-//トリガー：わいじ：Webアプリとしてデプロイ
-//⭕デプロイURL：
-
+/*
+ *🔧役割：ドキュメント内の全ての画像の高さを一括設定する。
+ *💡トリガー：わいじ：Webアプリとしてデプロイ
+ *🔗デプロイURL：https://ysjp.github.io/GAS-setImagesHeightById/
+*/
 
 function doGet() {
-  var template = HtmlService.createTemplateFromFile('index');
+  var template = HtmlService.createTemplateFromFile('main');
   return template.evaluate().setTitle('画像の高さを一括設定').setSandboxMode(HtmlService.SandboxMode.IFRAME);
 }
 
