@@ -4,9 +4,9 @@
 function setImagesHeightById() {
 
   //高さ（pix）とドキュメントの定義
-  const id = "1yOhtjMoTel84VyqtwjWUC7AnP2zHAab1mxIfLwrUbeQ";　//⭕指定
+  const id = "{ID}";　//⭕指定
 
-  const url = "https://docs.google.com/document/d/1CE4W1FzzqM_8rhMG_MPiPEirC_xrN3ePZDaH8cvXiM0/edit";
+  const url = "{URL}";
   const newHeight = 120; //⭕指定
   
   //処理
