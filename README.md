@@ -1,0 +1,2 @@
+# GAS-setImagesHeightById-
+Googleドキュメント内の画像の高さを一括設定するGASとWebアプリ
