@@ -32,23 +32,25 @@
         function executeScript() {
             var docUrl = document.getElementById("docUrl").value;
             var imageHeight = document.getElementById("imageHeight").value;
+            var resultDiv = document.getElementById("result");
 
             if (!docUrl || !imageHeight) {
-                var resultDiv = document.getElementById("result");
                 resultDiv.setAttribute("class", "alert alert-danger");
                 resultDiv.innerHTML = "ドキュメントURLと高さを正しく入力してください。";
                 return;
             }
 
+            // 実行中メッセージを表示
+            resultDiv.setAttribute("class", "alert alert-info");
+            resultDiv.innerHTML = "実行中・・・しばらくお待ちください";
+
             // 成功時は alert-success クラスを適用
             google.script.run.withSuccessHandler(function(response) {
-                var resultDiv = document.getElementById("result");
                 resultDiv.setAttribute("class", "alert alert-success");
                 resultDiv.innerHTML = response;
             })
             // 失敗時は alert-danger クラスを適用
             .withFailureHandler(function(error) {
-                var resultDiv = document.getElementById("result");
                 console.error('エラー詳細:', error);
                 resultDiv.setAttribute("class", "alert alert-danger");
                 resultDiv.innerHTML = "エラーが発生しました: " + error.message;
